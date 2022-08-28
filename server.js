@@ -16,7 +16,7 @@ const leerBBDD = async () => {
 
 
 app.get('/', function (req, res) {
-    res.send('Servido con node.js');
+    res.send(`<h1>Servidor basado en Node JS - Desafío 3</h1>`);
 });
 
 app.get('/productos', async function (req, res) {
