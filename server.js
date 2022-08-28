@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const { Contenedor } = require('./src/helpers/contenedor');
 
 const app = express();
@@ -35,10 +36,7 @@ app.get('/productoRandom', async function (req, res) {
         producto
      );
 });
-
-
-const PORT = 8080;
     
-app.listen(8080, function () {
-    console.log(`El servidor está funcionando en el puerto ${PORT}`);
+app.listen(process.env.PORT, function () {
+    console.log(`El servidor está funcionando en el puerto ${process.env.PORT}`);
 });    
